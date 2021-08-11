@@ -9,6 +9,12 @@
     text-decoration: none;
     
 }
+img{
+    max-width: 100%; // set img as responsive
+}
 html{
     font-size: 62.5%;
+    @include responsive(1280px){
+        font-size: 55%;
+    }
 }

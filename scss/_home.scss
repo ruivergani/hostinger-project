@@ -4,50 +4,89 @@
     background-color: $purple;
     padding-top: 3.9rem;
     .container{
-        @include flex(row, flex-start, space-between);
-        .text{
-            max-width: 55rem;
-            width: 100%;
-            h1{
-                font-family: 'PT Sans', sans-serif;
-                font-weight: bold;
-                font-size: 4.8rem;
-                line-height: 120%;
-                color: $white;
+        @include flex(row, flex-start, space-between);  
+    }
+    .text{
+        width: 100%;
+        max-width: 55rem;
+        h1{
+            font-family: 'PT Sans', sans-serif;
+            font-weight: bold;
+            font-size: 4.8rem;
+            line-height: 120%;
+            color: $white;
+        }
+        p{
+            margin-top: 1.6rem;
+            font-size: 1.8rem;
+            color: $white;
+            line-height: 150%;
+            max-width: 48.8rem;
+        }
+        button{
+            @include style-btn(5.4rem, $yellow, #503387);
+            margin-top: 3.2rem;
+            margin-bottom: 8.6rem;
+        }
+        .conheca{
+            @include flex(row, center, flex-start);
+            .icon{
+                width: 4.2rem;
+                height: 4.2rem;
+                border-radius: 6px;
+                background-color: #7B5ABA;
+                @include flex(row, center, center);
             }
+            span{
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                color: #FFFFFF;
+                margin-left: 1.6rem;
+                font-weight: bold;
+            }
+        }
+    }
+    .image-hero{
+        position: relative;
+        top: 3.4rem; // o tamanho que ultrapassa no header
+    }
+    @include responsive(991px){
+        .container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            text-align: center;
+            max-width: 90%;
             p{
-                margin-top: 1.6rem;
-                font-size: 1.8rem;
-                color: $white;
-                line-height: 150%;
-                max-width: 48.8rem;
+                max-width: 90%;
             }
             button{
-                @include style-btn(5.4rem, $yellow, #503387);
-                margin-top: 3.2rem;
-                margin-bottom: 8.6rem;
+                margin: 0 auto;
+                margin-top: 2rem;
+                margin-bottom: 4rem;
+                display: block;
             }
             .conheca{
-                @include flex(row, center, flex-start);
-                .icon{
-                    width: 42px;
-                    height: 42px;
-                    border-radius: 6px;
-                    background-color: #7B5ABA;
-                    @include flex(row, center, center);
-                }
-                span{
-                    font-size: 1.6rem;
-                    line-height: 1.9rem;
-                    color: #FFFFFF;
-                    margin-left: 1.6rem;
-                    font-weight: bold;
-                }
+                justify-content: center;
             }
         }
         .image-hero{
-            position: relative;
-            top: 3.4rem; // o tamanho que ultrapassa no header
+            margin-top: 3rem;
+        }
+    }
+    @include responsive(600px){
+        padding-top: 2.5rem;
+        margin-top: 8rem;
+        .text{
+            h1{
+                font-size: 4.3rem;
+            }
+        }
+        .image-hero{
+            left: -8px;
         }
     }
 }
+
