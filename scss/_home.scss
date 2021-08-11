@@ -1,4 +1,6 @@
 // home page
+
+//section hero
 .s-hero{
     margin-top: 11.9rem; // header height
     background-color: $purple;
@@ -90,3 +92,101 @@
     }
 }
 
+//section resources
+.s-resources{
+    padding-top: 14.9rem;
+    padding-bottom: 9.9rem;
+    .top{
+        @include flex(row, center, space-between);
+        margin-bottom: 5.3rem;
+        h2{
+            font-family: 'PT Sans', sans-serif;
+            font-weight: bold;
+            font-size: 3.2rem;
+            line-height: 130%;
+            color: $grey-01;
+            max-width: 50.2rem;
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: 150%;
+            color: $grey-02;
+        }
+    }
+    .content{
+        @include flex(row, flex-start, space-between);
+        .icon{
+            border-radius: 12px;
+            width: 6.4rem;
+            height: 6.4rem;
+            background-color: rgba(197, 190, 220,0.1);
+            @include flex(row, center, center);
+            margin-bottom: 3rem;
+        }
+        .info{
+            h4{
+                font-weight: 800;
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+                color: $purple;
+            }
+            p{
+                font-size: 16px;
+                line-height: 165%;
+                color: $grey-02;
+                margin-top: 2rem;
+                max-width: 23.9rem;
+            }
+        }
+        ul{
+            width: 100%;
+            max-width: 90.4rem;
+            @include flex(row, flex-start, space-between);
+            margin-top: 4.1rem;
+            border-bottom: 3px solid rgba(95, 60, 161,0.1);
+            padding-bottom: 6.5rem;
+            padding-left: 2rem;
+        }
+        .card-featured{
+            background-color: rgba(197, 190, 220,0.1);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 28rem;
+            height: 32.3rem;
+            padding-top: 4.1rem;
+            padding-left: 4.2rem;
+            .icon{
+                background-color: $white;
+            }
+            .info{
+                p{
+                    max-width: 20.4rem;
+                }
+            }
+        }
+    }
+    @include responsive(991px){
+        .content{
+            flex-direction: column;
+            align-items: flex-start;
+            .card-featured{
+                max-width: 100%;
+                height: auto;
+                padding: 3rem;
+                @include flex(column, center, center);
+                .info{
+                    max-width: 100%;
+                    text-align: center;
+                }
+            }
+            ul{
+                max-width: 100%;
+            }
+        }
+    }
+    @include responsive(768px){
+        padding-top: 10rem;
+        margin-bottom: 5rem;
+    }
+       
+}
