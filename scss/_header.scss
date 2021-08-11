@@ -1,0 +1,57 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11.9rem;
+    background-color: $purple;
+    display: flex;
+    .container{
+        @include flex(row, center, space-between);
+    }
+    nav{
+        ul{
+            display: flex;
+            align-items: center;
+            li{
+                &:not(:first-child){
+                    margin-left: 5.6rem; //regra nao aplicada ao primeiro elemento
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-right: 1.4rem;
+                    }
+                    span{
+                        font-size: 1.6rem;
+                        line-height: 1.9rem;
+                        color: $header-text;
+                        transition: all .3s;
+                    }
+                    span:hover{
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+    // mixin responsive
+    @include responsive(600px){
+        .container{
+            justify-content: center;
+        }
+        nav{
+            display: none;
+        }
+    }
+    @include responsive(480px){
+        height: 8rem;
+        a{
+            img{
+                width: 14rem;
+                max-width: 100%;
+            }
+        }
+    }
+}
