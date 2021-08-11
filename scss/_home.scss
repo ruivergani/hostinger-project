@@ -187,6 +187,32 @@
     @include responsive(768px){
         padding-top: 10rem;
         margin-bottom: 5rem;
+        .top{
+            flex-direction: column;
+            text-align: center;
+            h2{
+                margin-bottom: 1rem;
+            }
+        }
     }
-       
+    @include responsive(480px){
+        padding-top: 6rem;
+        .content{
+            ul{
+                @include flex(column, center, center);
+                padding-left: 0rem;
+                margin-top: 3rem;
+                li{
+                    @include flex(column, center, center);
+                    h4,p{
+                        text-align: center;
+                    }
+                    margin-top: 3rem;
+                }
+            }
+            .info{
+                max-width: 95%;
+            }
+        }
+    }
 }
