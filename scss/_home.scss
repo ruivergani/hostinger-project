@@ -1,3 +1,53 @@
-button{
-    @include style-btn(5.4rem, $yellow, $purple);
+// home page
+.s-hero{
+    margin-top: 11.9rem; // header height
+    background-color: $purple;
+    padding-top: 3.9rem;
+    .container{
+        @include flex(row, flex-start, space-between);
+        .text{
+            max-width: 55rem;
+            width: 100%;
+            h1{
+                font-family: 'PT Sans', sans-serif;
+                font-weight: bold;
+                font-size: 4.8rem;
+                line-height: 120%;
+                color: $white;
+            }
+            p{
+                margin-top: 1.6rem;
+                font-size: 1.8rem;
+                color: $white;
+                line-height: 150%;
+                max-width: 48.8rem;
+            }
+            button{
+                @include style-btn(5.4rem, $yellow, #503387);
+                margin-top: 3.2rem;
+                margin-bottom: 8.6rem;
+            }
+            .conheca{
+                @include flex(row, center, flex-start);
+                .icon{
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 6px;
+                    background-color: #7B5ABA;
+                    @include flex(row, center, center);
+                }
+                span{
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    color: #FFFFFF;
+                    margin-left: 1.6rem;
+                    font-weight: bold;
+                }
+            }
+        }
+        .image-hero{
+            position: relative;
+            top: 3.4rem; // o tamanho que ultrapassa no header
+        }
+    }
 }
