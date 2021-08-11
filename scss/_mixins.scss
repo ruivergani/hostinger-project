@@ -8,7 +8,7 @@
 @mixin style-btn($height, $bg, $colorText){
     display: inline-block;
     height: $height;
-    line-height: 5.4rem; // coloca a mesma altura do botao (para centralizar o texto)
+    line-height: 5.4rem; // same as button height (to centralize the text)
     background-color: $bg;
     border-radius: 6px;
     padding: 0 5rem;
@@ -19,4 +19,11 @@
         background-color: $colorText;
         color: $bg;
     }
+}
+// flex-mixin
+@mixin flex($direction, $align, $justify){
+    display: flex;
+    align-items: $align;
+    flex-direction: $direction;
+    justify-content: $justify;
 }
