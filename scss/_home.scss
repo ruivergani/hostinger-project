@@ -201,7 +201,7 @@
             ul{
                 @include flex(column, center, center);
                 padding-left: 0rem;
-                margin-top: 3rem;
+                margin-top: 0rem;
                 li{
                     @include flex(column, center, center);
                     h4,p{
