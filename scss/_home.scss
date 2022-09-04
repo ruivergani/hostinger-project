@@ -1,4 +1,26 @@
 // home page
+@keyframes leftRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes downUp{
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
 //section hero
 .s-hero{
@@ -11,12 +33,14 @@
     .text{
         width: 100%;
         max-width: 55rem;
+        animation: leftRight 0.8s ease 0s 1 normal forwards;
         h1{
             font-family: 'PT Sans', sans-serif;
             font-weight: bold;
             font-size: 4.8rem;
             line-height: 120%;
             color: $white;
+
         }
         p{
             margin-top: 1.6rem;
@@ -51,6 +75,7 @@
     .image-hero{
         position: relative;
         top: 3.4rem; // o tamanho que ultrapassa no header
+        animation: downUp 1.2s ease 0s 1 normal forwards;
     }
     @include responsive(991px){
         .container{
@@ -139,6 +164,17 @@
             }
         }
         ul{
+            li{
+                &:first-child{
+                    animation: leftRight 1.7s ease 0s 1 normal forwards;
+                }
+                &:nth-child(2){
+                    animation: leftRight 2s ease 0s 1 normal forwards;
+                }
+                &:nth-child(3){
+                    animation: leftRight 2.3s ease 0s 1 normal forwards;
+                }
+            }
             width: 100%;
             max-width: 90.4rem;
             @include flex(row, flex-start, space-between);
@@ -148,6 +184,7 @@
             padding-left: 2rem;
         }
         .card-featured{
+            animation: leftRight 1.4s ease 0s 1 normal forwards;
             background-color: rgba(197, 190, 220,0.1);
             border-radius: 12px;
             width: 100%;
